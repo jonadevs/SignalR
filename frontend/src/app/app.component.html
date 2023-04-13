@@ -1,0 +1,11 @@
+<div class="screen" (click)="this.onClick($event)">
+  <div class="log" *ngIf="position">position: {{ position | json }}</div>
+  <img
+    class="cursor"
+    src="../assets/cursor.png"
+    alt="cursor image"
+    width="50"
+    [style.top]="position.y + 'px'"
+    [style.left]="position.x + 'px'"
+  />
+</div>
