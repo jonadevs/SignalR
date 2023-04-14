@@ -1,4 +1,8 @@
-<div class="screen" (click)="this.onClick($event)">
+<div
+  class="screen"
+  (touchmove)="this.onMove($event)"
+  (mousemove)="this.onMove($event)"
+>
   <div class="log" *ngIf="position">position: {{ position | json }}</div>
   <img
     class="cursor"
